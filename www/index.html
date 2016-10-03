@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+      <script src="js/index.js"></script>
+  </head>
+  <body>
+    <ons-tabbar id="tabbar">
+      <ons-tab label="Tab 1" page="tab1.html">
+      </ons-tab>
+      <ons-tab label="Tab 2" page="tab2.html" active>
+      </ons-tab>
+    </ons-tabbar>
+
+    
+    <ons-template id="tab1.html">
+      <ons-navigator id="myNavigator" page="page1.html">
+      </ons-navigator>
+      <ons-page id="page2">
+        <p style="text-align: center">
+          <div id="canvas-holder" style="width:100%">
+            <h1>Pie chart</h1>
+            <canvas id="pie-chart-area" width="300" height="300">
+            </canvas>
+            <h1>Bar chart</h1>
+            <canvas id="bar-chart-area" width="300" height="300">
+            </canvas>
+          </div>
+        </p>
+      </ons-page>
+    </ons-template>
+    
+    <ons-template id="page1.html">
+      <ons-page id="page1">
+        <ons-toolbar>
+          <div class="center">My app</div>
+        </ons-toolbar>
+      </ons-page>
+    </ons-template>
+    
+    <ons-template id="tab2.html">
+      <ons-toolbar>
+        <div class="center">Graph</div>
+      </ons-toolbar>
+      <ons-page id="page2">
+      </ons-page>
+    </ons-template>
+  </body>
+</html>
