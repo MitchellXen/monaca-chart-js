@@ -1,6 +1,9 @@
-ons.ready(function(){
-  pieChart();
-  barChart();
+document.addEventListener('init', function(event) {
+  if(event.target.id == 'page1') {
+    pieChart();
+  } else if(event.target.id == 'page2'){
+    barChart();
+  }
 });
 
 function pieChart() {
